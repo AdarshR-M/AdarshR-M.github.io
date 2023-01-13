@@ -1,0 +1,434 @@
+
+/* I have used almost no bootstrap features to make the header, thus it goes too long
+(till 320 lines)*/
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+@media screen and (min-width: 992px) {
+    .carousel-item{
+        height: 40rem;
+        background-color: black;
+        color: white;
+        position: relative;
+    }
+    header{
+        max-width: 100%;
+        height: 120px;
+        background-color: rgb(34,48,96);
+        padding: 0px;
+    }
+    #head-logo{
+        float:left;
+        padding: 10px;
+        max-width: 120px;
+        text-decoration: none;
+    }
+    .head-logo {
+        position: relative;
+        display: block;
+        border-bottom: 1px dotted black; 
+    }
+    .head-logo .tooltiptext{
+        content: " ";
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        font-size: small;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        top: 120px;
+        left: 0px;
+        z-index: 1;
+    }
+    .head-logo:hover .tooltiptext {
+        visibility: visible;
+    }
+    .head-logo .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;  /* At the top of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+    }
+    ul.header{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li.header{
+        display: inline;
+        float: left;
+        padding: 0;
+    }
+    a.header{
+        display: block;
+        padding: 50px 30px 30px;
+        color: aliceblue;
+        text-decoration: none;
+    }
+    #head-logo a:hover{
+        display: block;
+    }
+    .header a:hover{
+        margin-top: 10px;
+        display: block;
+        padding: 30px 30px 30px;
+        color: black;
+        background-color: aqua;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .dropbtn {
+        background: url("hamburger.png");
+        width: 40px;
+        height: 30px;
+        padding-top: 30px;
+        background-size: cover;
+        border: none;
+        position: relative;
+        display: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: none;
+    }
+    .dropdown-content {
+        display: none;
+        position: relative;
+        background-color: #76def3;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: none;
+    }
+  .dropdown-content a:hover {
+    background-color: rgb(35, 130, 231);
+    display: none;
+    }
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+    .dropdown:hover .dropbtn {
+        background: url("hamburger.png");
+        width: 40px;
+        height: 30px;
+        padding-top: 30px;
+        background-size: cover;
+        border: none;
+        display: none;
+    }
+}
+@media screen and (max-width: 991px) {
+        header{
+            max-width: 100%;
+            height: 120px;
+            background-color: rgb(34,48,96);
+            padding: 0px;
+            z-index: 1;
+            overflow: visible;
+        }
+        #head-logo{
+            float:left;
+            padding: 10px;
+            max-width: 120px;
+            text-decoration: none;
+        }
+    @media screen and (max-width: 700px){
+        #head-logo{
+            float:left;
+            position: absolute;
+            left : 3%;
+            padding: 10px;
+            max-width: 120px;
+            text-decoration: none;
+        }
+    }
+    .head-logo {
+        position: relative;
+        display: block;
+        border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+    .head-logo .tooltiptext{
+        content: " ";
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        font-size: small;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        top: 120px;
+        left: 0px;
+        z-index: 1;
+    }
+    .head-logo:hover .tooltiptext {
+        visibility: visible;
+    }
+    .head-logo .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;  /* At the top of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+    }
+    ul.header{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    li.header{
+        float: left;
+        padding: 0;
+        display: none;
+    }
+    li.dropdown{
+        display: none;
+        float: right;
+        padding: 0;
+    }
+    a.header{
+        display: none;
+        padding: 50px 30px 30px;
+        color: aliceblue;
+        text-decoration: none;
+    }
+    .header a:hover{
+        display: none;
+        padding: 50px 30px 30px;
+        color: rgb(14, 135, 240);
+        background-color: aquamarine;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 500px) {
+        .carousel-item{
+            height: 20rem;
+            background-color: black;
+            color: white;
+            position: relative;
+        }
+        .dropbtn {
+            background: url("hamburger.png");
+            max-width: 40px;
+            max-height: 30px;
+            padding: 20px;
+            background-size: cover;
+            border: none;
+            position: absolute;
+            top: 30px;
+            right: 5%;
+        }  
+        .dropdown {
+            position: absolute;
+            top: 10px;
+            right: 5%;
+            padding: 60px;
+            display: inline-block;
+        }
+    }
+    @media screen and (min-width: 500px) and (max-width:700px)  {
+        .carousel-item{
+            height: 30rem;
+            background-color: black;
+            color: white;
+            position: relative;
+        }
+        .dropbtn {
+            background: url("hamburger.png");
+            max-width: 40px;
+            max-height: 30px;
+            padding: 20px;
+            background-size: cover;
+            border: none;
+            position: absolute;
+            top: 30px;
+            right: 5%;
+        }  
+        .dropdown {
+            position: absolute;
+            top: 10px;
+            right: 5%;
+            padding: 60px;
+            display: inline-block;
+            z-index: 1;
+        }
+    }
+    @media screen and (min-width:700px) and (max-width: 992px) {
+        .carousel-item{
+            height: 40rem;
+            background-color: black;
+            color: white;
+            position: relative;
+        }
+        .dropbtn {
+            background: url("hamburger.png");
+            max-width: 40px;
+            max-height: 30px;
+            padding: 20px;
+            background-size: cover;
+            border: none;
+            position: absolute;
+            top: 30px;
+            right: 10%;
+        } 
+        .dropdown {
+            position: absolute;
+            padding: 100px;
+            top: 10px;
+            right: 5%;
+            display: inline-block;
+            z-index: 1;
+        }
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        background-color: #76def3;
+        text-decoration: none;
+        z-index: 1;
+    }
+  
+    .dropdown-content a {
+        color: black;
+        padding: 10px;
+        position: inherit;
+        left: 0%;
+        width: 100%;
+        text-decoration: none;
+        display:inline-block;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+  .dropdown:hover .dropdown-content {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0px;
+        top: 110px;
+        z-index: 1;
+    }
+    .dropdown-content a:hover{
+        background-color: rgb(223, 107, 24);
+        color: rgb(4, 16, 27);
+        z-index: 1;
+    }
+    .dropdown:hover .dropbtn {
+        background: url("hamburger.png");
+        background-size: cover;
+        border: none;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+
+
+.containe{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    padding-bottom: 50px;
+    display: none;
+}
+.overlay-image{
+    position: absolute;
+    bottom:0;
+    top: 0;
+    left:0;
+    right: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+.carousel-item:hover .containe{
+    position: absolute;
+    bottom: 0;
+    left:10%;
+    right: 0;
+    padding-bottom: 50px;
+    display: inline;
+}
+.carousel-item:hover .overlay-image{
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+}
+.carousel-control-next{
+    z-index: 0;
+}
+.carousel-control-prev{
+    z-index: 0;
+}
+
+h1.normal{
+    color: rgb(12, 139, 139);
+    margin-left: 5%;
+}
+
+p.normal{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.list-group{
+    max-width: 800px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.table{
+    margin-left: 3%;
+    margin-right: 5%;
+    background-color: rgb(27, 79, 237);
+    border-radius: 10px;
+    color: aliceblue;
+}
+td.cell{
+    border: 1px solid rgb(244, 248, 249);
+    background-color: rgb(108, 195, 253);
+    color: black;
+    text-align: center;
+}
+td.cell:hover{
+    background-color: rgb(108, 253, 147);
+    border-radius: 5px;
+}
+th.table-head{
+    border-right: 1px solid rgb(244, 248, 249);
+    text-align: center;
+}
+#cell-spl #spl2{
+    border-bottom-right-radius: 10px;
+}
+.card{
+    margin: 5%;
+}
+.form-check{
+    margin-left: 10%;
+}
